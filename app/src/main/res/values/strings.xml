@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Ambition</string>
+    <string name="action_settings">Settings</string>
+    <string name="newGoal">Would you like to add a new goal?</string>
+    <string name="hint">Please write it here.</string>
+    <string name="CheckboxText">Life Changing Goal?</string>
+    <string name="SaveButton">Save</string>
+    <string name="CancelButton">Cancel</string>
+    <string name="AddAmbition">Feed Your Ambition!</string>
+    <string name="moreOptionsTitle">More Options</string>
+    <string name="Delete">DELETE</string>
+    <string name="congrats">Congrats! You\'re moving on with your life!</string>
+    <string name="lessCongrats">Any Accomplishment is a big one!</string>
+    <string name="completion">"Congrats! You have finished everything on your list!"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="flush">There goes your ambition ..</string>
+    <string name="NoGoal">You haven\'t entered in any text!</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6942193585541819/2810353882</string>
+    <string name="isImportant"> Important </string>
+    <string name="Edit_Goal"> Edit your goal:</string>
+    <string name="Edit_Button">Edit</string>
+    <string name="content_description">Star</string>
+    <string name="try_entering_something_you_want_to_work_towards">Try entering something you want to work towards!</string>
+    <string name="enter_your_new_list_title">Enter your new list title!</string>
+    <string name="edit_your_list_s_title">Edit your List\'s title:</string>
+    <string name="duplicate_list">You have a list with the same name!</string>
+    <string name="careful">DELETING LISTS ALSO DELETES ALL THE GOALS ASSOCIATED WITH IT!</string>
+    <string name="ListLimit">Sorry, you can\'t have more than 23 lists.</string>
+</resources>
