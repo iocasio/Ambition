@@ -40,17 +40,17 @@ public class List_Fragment extends Fragment {
     private static final String ARG_NEW_TITLE ="new_title";
     private Database_Controller mDatabaseController;
     private static final String ARG_ID = "ID";
-    ArrayList<Goal> goalList;
-    LinearLayoutManager manager;
+    private ArrayList<Goal> goalList;
+    private LinearLayoutManager manager;
     public RecyclerView.Adapter adapter;
     public ReceiverThread UiThread;
-    FragmentManager fragmentManager;
-    String list_title;
-    FloatingActionMenu materialDesignFAM;
-    FloatingActionButton floatingActionButton1, floatingActionButton2;
+    private FragmentManager fragmentManager;
+    private String list_title;
+    private FloatingActionMenu materialDesignFAM;
+    private FloatingActionButton floatingActionButton1, floatingActionButton2;
     private viewPagerCallBack callBack;
     private Button title_button;
-    MediaPlayer player;
+    private MediaPlayer player;
 
     public List_Fragment() {
         // Required empty public constructor
