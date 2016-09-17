@@ -51,18 +51,6 @@ public class Edit_PopUp extends DialogFragment{
 
         return dialog;
     }
-
-    //Builder method to edit List
-    public static Edit_PopUp newListInstance(GoalList inputList){
-        list = inputList;
-        Edit_PopUp dialogTwo = new Edit_PopUp();
-        Bundle args = new Bundle();
-        args.putString(ARG_NEW_TITLE, list.getTitle());
-        dialogTwo.setArguments(args);
-
-        return dialogTwo;
-    }
-
     
     //Create and inflate dialog
     public Dialog onCreateDialog(Bundle savedInstanceState){
