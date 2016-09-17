@@ -10,7 +10,6 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
-
 import ocasiocorp.ambition.Model.Goal;
 import ocasiocorp.ambition.Model.GoalList;
 import ocasiocorp.ambition.R;
@@ -23,14 +22,14 @@ public class MoreListOptions_PopUp extends DialogFragment {
     private static final String ARG_NEW_TITLE = "new_title";
     private static final String ARG_ID = "ID";
     public String List_String;
-
-    TextView textView1,textView2;
+    private TextView textView1,textView2;
     private static GoalList mGoalList;
 
     public MoreListOptions_PopUp() {
 
     }
 
+    //Builder method
     public static MoreListOptions_PopUp newInstance(GoalList list) {
         mGoalList = list;
         MoreListOptions_PopUp dialog = new MoreListOptions_PopUp();
@@ -41,7 +40,7 @@ public class MoreListOptions_PopUp extends DialogFragment {
         return dialog;
     }
 
-
+    
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.moreoptions_popup, null);
         Bundle args = getArguments();
