@@ -11,7 +11,6 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-
 import ocasiocorp.ambition.R;
 
 /**
@@ -24,9 +23,12 @@ public class AddNewList_PopUp extends DialogFragment {
     private EditText mEditText;
     private String newListTitle;
     private static Fragment fragment;
+    
+    //Default constructor
     public AddNewList_PopUp(){
     }
 
+    //Builder method
     public static AddNewList_PopUp newInstance(Fragment frg){
         fragment = frg;
         AddNewList_PopUp dialog = new AddNewList_PopUp();
