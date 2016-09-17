@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-
 import ocasiocorp.ambition.Model.Goal;
 import ocasiocorp.ambition.Model.GoalList;
 import ocasiocorp.ambition.R;
@@ -21,23 +20,26 @@ import ocasiocorp.ambition.R;
  */
 public class Edit_PopUp extends DialogFragment{
 
+    //Identifiers 
     private static final String ARG_GOALNAME ="Goal";
     private static final String ARG_ID = "ID";
     private static final String ARG_IMPORTANT = "Important";
     private static final String ARG_NEW_TITLE ="new_title";
-
+    
     private static Goal mGoal;
     private CheckBox mCheckbox;
     private EditText mEditText;
-    String goalString;
-    Boolean isImportant;
-    String id;
+    private String goalString;
+    private Boolean isImportant;
+    private String id;
     private static GoalList list;
 
+    //Default constructor
     public Edit_PopUp(){
 
     }
 
+    //Builder method to input and return data
     public static Edit_PopUp newInstance(Goal goal){
         mGoal = goal;
         Edit_PopUp dialog = new Edit_PopUp();
@@ -50,6 +52,7 @@ public class Edit_PopUp extends DialogFragment{
         return dialog;
     }
 
+    //
     public static Edit_PopUp newListInstance(GoalList inputList){
         list = inputList;
         Edit_PopUp dialogTwo = new Edit_PopUp();
