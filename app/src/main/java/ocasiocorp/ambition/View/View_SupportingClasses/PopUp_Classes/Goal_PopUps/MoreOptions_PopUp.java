@@ -10,7 +10,6 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
-
 import ocasiocorp.ambition.Model.Goal;
 import ocasiocorp.ambition.R;
 
@@ -21,14 +20,15 @@ public class MoreOptions_PopUp extends DialogFragment {
 
     private static final String ARG_GOALNAME ="Goal";
     private static final String ARG_ID = "ID";
-
-    TextView textView;
+    private TextView textView;
     private static Goal mGoal;
 
+    // Default constructor
     public MoreOptions_PopUp(){
 
     }
 
+    //Builder method for inputting data
     public static MoreOptions_PopUp newInstance(Goal goal){
         mGoal = goal;
         MoreOptions_PopUp dialog = new MoreOptions_PopUp();
@@ -39,7 +39,7 @@ public class MoreOptions_PopUp extends DialogFragment {
         return dialog;
     }
 
-
+    // Create Dialog and inflate widgets
     public Dialog onCreateDialog(Bundle savedInstanceState){
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.moreoptions_popup, null);
         Bundle args = getArguments();
@@ -54,8 +54,10 @@ public class MoreOptions_PopUp extends DialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent = new Intent();
+                        //Grab the id 
                         String id = mGoal.getmId().toString();
                         intent.putExtra(ARG_ID,id);
+                        //Return result code and the ID for the goal
                         getTargetFragment().onActivityResult(
                                 getTargetRequestCode(),
                                 Activity.RESULT_OK,
