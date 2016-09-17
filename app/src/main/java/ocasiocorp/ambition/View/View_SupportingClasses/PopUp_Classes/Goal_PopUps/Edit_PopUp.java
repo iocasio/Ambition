@@ -39,7 +39,7 @@ public class Edit_PopUp extends DialogFragment{
 
     }
 
-    //Builder method to input and return data
+    //Builder method to input and return data for "Add new Goal function" 
     public static Edit_PopUp newInstance(Goal goal){
         mGoal = goal;
         Edit_PopUp dialog = new Edit_PopUp();
@@ -52,7 +52,7 @@ public class Edit_PopUp extends DialogFragment{
         return dialog;
     }
 
-    //
+    //Builder method to add new List
     public static Edit_PopUp newListInstance(GoalList inputList){
         list = inputList;
         Edit_PopUp dialogTwo = new Edit_PopUp();
@@ -63,7 +63,8 @@ public class Edit_PopUp extends DialogFragment{
         return dialogTwo;
     }
 
-
+    
+    //Create and inflate dialog
     public Dialog onCreateDialog(Bundle savedInstanceState){
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.edit_popup, null);
         Bundle args = getArguments();
