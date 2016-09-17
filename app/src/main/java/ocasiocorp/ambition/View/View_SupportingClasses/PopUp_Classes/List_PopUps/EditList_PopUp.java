@@ -10,7 +10,6 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-
 import ocasiocorp.ambition.R;
 
 /**
@@ -21,10 +20,12 @@ public class EditList_PopUp extends DialogFragment {
     private EditText mEditText;
     public String List_String;
 
+    //Default constructor
     public EditList_PopUp(){
 
     }
 
+    //Builder method
     public static EditList_PopUp newListInstance(String inputList){
         EditList_PopUp dialog = new EditList_PopUp();
         Bundle args = new Bundle();
