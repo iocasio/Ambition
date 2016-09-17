@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-
 import ocasiocorp.ambition.R;
 
 
@@ -31,12 +30,14 @@ public class AddNew_PopUp extends DialogFragment{
     public AddNew_PopUp(){
     }
 
+    //Builder method to add new goal or list
     public static AddNew_PopUp newInstance(Fragment frg){
         fragment = frg;
         AddNew_PopUp dialog = new AddNew_PopUp();
         return dialog;
     }
 
+    //Creates inflates dialog
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.classes_addnew, null);
@@ -49,7 +50,6 @@ public class AddNew_PopUp extends DialogFragment{
                     public void onClick(DialogInterface dialog, int which) {
                         GoalText = mEditText.getText().toString();
                         isImportant = mCheckbox.isChecked();
-                        System.out.println(isImportant+ " HERE'S THE PROBLEM!");
                         Intent intent = new Intent();
                         intent.putExtra(ARG_GOALNAME, GoalText);
                         intent.putExtra(ARG_IMPORTANT, isImportant);;
